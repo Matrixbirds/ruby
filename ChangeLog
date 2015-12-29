@@ -1,3 +1,56 @@
+Tue Dec 29 10:35:00 2015  Kenta Murata  <mrkn@mrkn.jp>
+
+	* test/mkmf/test_have_func.rb (test_have_func):
+	  Add assertion to examine the existence of HAVE_RUBY_INIT.
+
+	* test/mkmf/test_have_func.rb (test_not_have_func):
+	  Add assertion to examine the absence of HAVE_RUBY_INIT.
+
+Tue Dec 29 06:50:42 2015  Eric Wong  <e@80x24.org>
+
+	* thread_sync.c: static classes
+
+Tue Dec 29 05:30:30 2015  Eric Wong  <e@80x24.org>
+
+	* lib/resolv.rb (Resolv::IPv6.create): avoid modifying frozen
+	* test/resolv/test_dns.rb (test_ipv6_create): test for above
+	  [Bug #11910] [ruby-core:72559]
+
+Mon Dec 28 14:55:57 2015  Kuniaki IGARASHI  <igaiga@gmail.com>
+
+	* test/ruby/test_string.rb (TestString#test_rstrip_bang): Add test
+	  for String#rstrip!.  [Fix GH-1176]
+
+Mon Dec 28 09:18:53 2015  Kuniaki IGARASHI  <igaiga@gmail.com>
+
+	* test/ruby/test_string.rb (TestString#test_lstrip_bang): Add test
+	  for String#lstrip!.  [Fix GH-1176]
+
+Sun Dec 27 23:32:26 2015  Masaki Suketa <masaki.suketa@nifty.ne.jp>
+
+	* ext/win32ole/win32ole.c (ole_variant2val): refactoring.
+
+Sun Dec 27 21:14:42 2015  NAKAMURA Usaku  <usa@ruby-lang.org>
+
+	* process.c (rb_execarg_parent_start1): need to convert the encoding to
+	  ospath's one.
+
+Sun Dec 27 20:54:22 2015  NAKAMURA Usaku  <usa@ruby-lang.org>
+
+	* process.c: use rb_w32_uchdir() instead of plain chdir() on Windows.
+	  reported by naruse via twitter.
+
+	* process.c (rb_execarg_addopt): need to convert the encoding to
+	  ospath's one.
+
+Sun Dec 27 20:00:31 2015  SHIBATA Hiroshi  <hsbt@ruby-lang.org>
+
+	* enc/x_emoji.h: fix dead-link.
+
+Sun Dec 27 19:55:55 2015  SHIBATA Hiroshi  <hsbt@ruby-lang.org>
+
+	* doc/NEWS-2.3.0: fix a typo.
+
 Sun Dec 27 18:08:15 2015  Kuniaki IGARASHI  <igaiga@gmail.com>
 
 	* string.c (rb_str_lstrip_bang, rb_str_rstrip_bang): [DOC] Fix
@@ -19,7 +72,7 @@ Sun Dec 27 11:50:53 2015  Kuniaki IGARASHI  <igaiga@gmail.com>
 Sun Dec 27 11:47:46 2015  Kuniaki IGARASHI  <igaiga@gmail.com>
 
 	* test/ruby/test_string.rb (test_insert): Add test for
-	  String#test_insert.  The test cases are written in string.c
+	  String#insert.  The test cases are written in string.c
 	  comments as a reference.  [Fix GH-1173]
 
 Sun Dec 27 11:03:33 2015  Nobuyoshi Nakada  <nobu@ruby-lang.org>
